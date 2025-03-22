@@ -1,4 +1,5 @@
 mod basen;
+mod fibonacci;
 mod iszero;
 mod natural;
 mod sqrt;

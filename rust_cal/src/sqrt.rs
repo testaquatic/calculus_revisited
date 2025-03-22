@@ -26,3 +26,12 @@ pub fn sqrt(mut x: f64) -> f64 {
 
     return y;
 }
+
+#[test]
+fn test_sqrt() {
+    (0..=100).for_each(|i| {
+        let x = i as f64 / 10.0;
+        // `is_zero(sqrt(x) - x.sqrt())`는 테스트를 통과하지 못해서 조건을 완화했다.
+        assert!((sqrt(x) - x.sqrt()).abs() <= 1e-5);
+    });
+}

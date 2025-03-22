@@ -1,5 +1,3 @@
-use std::iter::{self, repeat};
-
 use crate::{RustCal, basen::basen};
 
 pub fn interative_square(a: f64, n: usize) -> f64 {
