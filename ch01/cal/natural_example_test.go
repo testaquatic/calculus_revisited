@@ -11,7 +11,6 @@ func ExampleNaturalSequence() {
 	}
 
 	// Output:
-	// Output:
 	// 2.000	2.0000	(n = 1e+00)
 	// 2.594	2.5937	(n = 1e+01)
 	// 2.705	2.7048	(n = 1e+02)
@@ -20,4 +19,13 @@ func ExampleNaturalSequence() {
 	// 2.718	2.7183	(n = 1e+05)
 	// 2.718	2.7183	(n = 1e+06)
 	// 2.718	2.7183	(n = 1e+07)
+}
+
+func ExampleNaturalSeries() {
+	fmt.Printf("%.6f (sequence)\n", NaturalSequence(10))
+	fmt.Printf("%.6f (series)\n", NaturalSeries(10))
+
+	// Output:
+	// 2.593742 (sequence)
+	// 2.718282 (series)
 }

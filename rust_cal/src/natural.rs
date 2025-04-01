@@ -1,4 +1,4 @@
-use crate::{RustCal, basen::basen};
+use crate::basen::basen;
 
 pub fn interative_square(a: f64, n: usize) -> f64 {
     (0..n).fold(a, |acc, _| acc * acc)
@@ -17,7 +17,7 @@ pub fn natural_sequence(n: usize) -> f64 {
         .enumerate()
         .filter_map(|(i, k)| {
             if *k == 1 {
-                Some(f.interative_square(i))
+                Some(interative_square(f, i))
             } else {
                 None
             }

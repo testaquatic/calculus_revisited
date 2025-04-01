@@ -1,4 +1,4 @@
-use crate::RustCal;
+use crate::iszero::is_zero;
 
 pub fn sqrt(mut x: f64) -> f64 {
     if x.is_sign_negative() {
@@ -12,7 +12,7 @@ pub fn sqrt(mut x: f64) -> f64 {
     }
 
     let (mut y, mut p) = (0.0, 1.0);
-    while !p.is_zero() {
+    while !is_zero(p) {
         if (y + p) * (y + p) <= x {
             y += p;
         }

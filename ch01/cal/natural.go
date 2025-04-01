@@ -20,3 +20,13 @@ func NaturalSequence(n int) float64 {
 
 	return e
 }
+
+func NaturalSeries(n int) float64 {
+	f, p := 1.0, 1.0
+	for i := 0; i < n; i++ {
+		p /= float64(i + 1)
+		f += p
+	}
+
+	return f
+}
