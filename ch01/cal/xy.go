@@ -3,10 +3,10 @@ package cal
 import "image"
 
 type XY struct {
-	W, H       int
+	// 이미지의 가로와 세로
+	W, H int
+	// x, y[min, max]
 	Xlim, Ylim [2]float64
-	Image      *image.Paletted
+	// 이미지 포인터
+	Image *image.Paletted
 }
-
-
-
